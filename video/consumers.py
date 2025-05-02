@@ -10,7 +10,7 @@ class CameraStreamTrack(VideoStreamTrack):
     def __init__(self):
         super().__init__()
         print("Starting camera...")
-        self.cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+        self.cap = cv2.VideoCapture(0)
         if not self.cap.isOpened():
             raise RuntimeError("Could not open video device.")
 
