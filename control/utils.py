@@ -1,10 +1,11 @@
 from gpiozero import Motor
 from time import sleep
 
+left_motor = Motor(forward=12, backward=18, pwm=True)
+right_motor = Motor(forward=13, backward=19, pwm=True)
+
 
 def write_operation(operation, speed):
-    left_motor = Motor(forward=12, backward=18, pwm=True)
-    right_motor = Motor(forward=13, backward=19, pwm=True)
 
     match operation:
         case 'forward':
