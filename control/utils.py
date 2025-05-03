@@ -1,8 +1,10 @@
 from gpiozero import Motor
 from time import sleep
+from gpiozero.pins.pigpio import PiGPIOFactory
 
-left_motor = Motor(forward=12, backward=18, pwm=True)
-right_motor = Motor(forward=13, backward=19, pwm=True)
+factory = PiGPIOFactory()
+left_motor = Motor(forward=12, backward=18, pwm=True, pin_factory=factory)
+right_motor = Motor(forward=18, backward=19, pwm=True, pin_factory=factory)
 
 
 def write_operation(operation, speed):
