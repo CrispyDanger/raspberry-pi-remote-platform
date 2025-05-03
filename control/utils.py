@@ -3,8 +3,8 @@ from time import sleep
 
 
 def write_operation(operation, speed):
-    left_motor = Motor(forward=12, backward=13, pwm=True)
-    right_motor = Motor(forward=18, backward=19, pwm=True)
+    left_motor = Motor(forward=12, backward=18, pwm=True)
+    right_motor = Motor(forward=13, backward=19, pwm=True)
 
     match operation:
         case 'forward':
