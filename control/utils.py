@@ -2,7 +2,7 @@ from gpiozero import Motor
 from time import sleep
 
 
-def write_operation(operation, speed):
+def write_operation(operation, speed=0):
     left_motor = Motor(forward=17, backward=18, pwm=True)
     right_motor = Motor(forward=22, backward=23, pwm=True)
 

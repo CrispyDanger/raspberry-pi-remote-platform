@@ -15,8 +15,14 @@ class DroneControlConsumer(AsyncWebsocketConsumer):
         data = json.loads(text_data)
         action = data.get("action")
 
-        if action == "forward":
-            print("Moving Forward")
-            write_operation('forward', 1.0)
-        elif action == "stop":
-            print("Stopping")
+        match action:
+            case 'forward':
+                write_operation('forward', 1.0)
+            case 'right':
+                write_operation('right', 1.0)
+            case 'left':
+                write_operation('left', 1.0)
+            case 'backward':
+                write_operation('backward', 1.0)
+            case 'stop':
+                write_operation('stop')
