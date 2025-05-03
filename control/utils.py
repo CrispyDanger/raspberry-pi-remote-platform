@@ -12,21 +12,25 @@ def write_operation(operation, speed):
     match operation:
         case 'forward':
             left_motor.forward(speed)
+            print('GOING FORWARD')
             right_motor.forward(speed)
             sleep(2)
 
         case 'backward':
             left_motor.backward(speed)
+            print('GOING BACKWARDS')
             right_motor.backward(speed)
             sleep(2)
 
         case 'left':
             left_motor.backward(speed)
+            print('GOING LEFT')
             right_motor.forward(speed)
             sleep(1)
 
         case 'right':
             left_motor.forward(speed)
+            print('GOING RIGHT')
             right_motor.backward(speed)
             sleep(1)
 
