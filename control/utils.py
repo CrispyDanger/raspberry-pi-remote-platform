@@ -35,5 +35,6 @@ def write_operation(operation, speed=0):
             sleep(1)
 
         case 'stop':
+            print('STOP')
             left_motor.stop()
             right_motor.stop()
