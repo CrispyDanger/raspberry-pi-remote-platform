@@ -35,5 +35,5 @@ def write_operation(operation, speed=0):
             sleep(1)
 
         case 'stop':
-            left_motor.stop(0)
-            right_motor.stop(0)
+            left_motor.stop(speed)
+            right_motor.stop(speed)
