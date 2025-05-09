@@ -7,7 +7,7 @@ left_motor = Motor(forward=12, backward=18, pwm=True, pin_factory=factory)
 right_motor = Motor(forward=13, backward=19, pwm=True, pin_factory=factory)
 
 
-def write_operation(operation, speed):
+def write_operation(operation, speed=0):
 
     match operation:
         case 'forward':
