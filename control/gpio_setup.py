@@ -5,6 +5,9 @@ const_gpio_left_pin = 18
 const_gpio_right_pin = 12
 const_duty_cycle_discrete = 1
 
+left_pwm = None
+right_pwm = None
+initialized = False
 
 def init_gpio():
     global left_pwm, right_pwm, initialized
