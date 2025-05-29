@@ -30,7 +30,6 @@ def write_operation(operation, speed=1):
 
         case 'backward':
             print('GOING BACKWARD')
-            # Inversion depends on your motor driver wiring
             pwm_control(left_pwm, 0)
             pwm_control(right_pwm, 0)
 
