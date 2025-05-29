@@ -1,4 +1,4 @@
-from .gpio_setup import left_pwm, right_pwm
+from .gpio_setup import left_pwm, right_pwm, init_gpio
 
 const_frequency = 50
 const_gpio_left_pin = 18
@@ -11,6 +11,7 @@ def pwm_control(pwm_obj, duty_cycle):
 
 
 def write_operation(operation, speed=1):
+    init_gpio()
     dc = speed + const_duty_cycle_discrete
 
     match operation:

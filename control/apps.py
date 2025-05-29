@@ -6,6 +6,5 @@ class ControlConfig(AppConfig):
     name = "control"
 
     def ready(self):
-        # Import and initialize GPIO
         from .gpio_setup import init_gpio
         init_gpio()

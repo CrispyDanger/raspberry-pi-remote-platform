@@ -9,6 +9,7 @@ left_pwm = None
 right_pwm = None
 initialized = False
 
+
 def init_gpio():
     global left_pwm, right_pwm, initialized
 
