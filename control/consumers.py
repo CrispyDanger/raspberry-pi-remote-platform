@@ -17,12 +17,12 @@ class DroneControlConsumer(AsyncWebsocketConsumer):
 
         match action:
             case 'forward':
-                write_operation('forward', 1.0)
+                write_operation('forward')
             case 'right':
-                write_operation('right', 1.0)
+                write_operation('right')
             case 'left':
-                write_operation('left', 1.0)
+                write_operation('left')
             case 'backward':
-                write_operation('backward', 1.0)
+                write_operation('backward')
             case 'stop':
                 write_operation('stop')

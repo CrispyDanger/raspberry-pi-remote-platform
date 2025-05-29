@@ -1,18 +1,9 @@
-import RPi.GPIO as GPIO
+from .gpio_setup import left_pwm, right_pwm
 
 const_frequency = 50
 const_gpio_left_pin = 18
 const_gpio_right_pin = 12
 const_duty_cycle_discrete = 1
-
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(const_gpio_left_pin, GPIO.OUT)
-GPIO.setup(const_gpio_right_pin, GPIO.OUT)
-
-left_pwm = GPIO.PWM(const_gpio_left_pin, const_frequency)
-right_pwm = GPIO.PWM(const_gpio_right_pin, const_frequency)
-left_pwm.start(0)
-right_pwm.start(0)
 
 
 def pwm_control(pwm_obj, duty_cycle):
