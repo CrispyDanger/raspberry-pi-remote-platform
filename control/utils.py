@@ -47,8 +47,8 @@ def write_operation(operation, speed=1):
 
         case 'backward':
             print('GOING BACKWARD')
-            pwm_control(left_pwm, 0)
-            pwm_control(right_pwm, 0)
+            pwm_control(left_pwm, dc)
+            pwm_control(right_pwm, dc)
 
         case 'left':
             print('TURNING LEFT')
