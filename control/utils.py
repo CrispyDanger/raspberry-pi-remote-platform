@@ -1,4 +1,5 @@
 import RPi.GPIO as GPIO
+import time
 
 const_frequency = 50
 const_gpio_left_pin = 18
@@ -39,6 +40,8 @@ def write_operation(operation, speed=1):
 
     dc = speed + const_duty_cycle_discrete
 
+    start_time = time.time()
+
     match operation:
         case 'forward':
             print('GOING FORWARD')
@@ -64,3 +67,7 @@ def write_operation(operation, speed=1):
             print('STOPPING')
             pwm_control(left_pwm, 0)
             pwm_control(right_pwm, 0)
+
+    end_time = time.time()
+    elapsed = end_time - start_time
+    print(f"Elapsed time from request to GPIO action: {elapsed:.6f} seconds")
